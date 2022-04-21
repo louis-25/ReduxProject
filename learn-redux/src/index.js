@@ -5,6 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import './exercise'
 import { createStore } from 'redux';
+import { Provider } from 'react-redux'; // 어떤 컴포넌트에서도 리덕스 스토어에 접근할 수 있게됨
 import rootReducer from './modules';
 
 const store = createStore(rootReducer); // 스토어를 만듭니다.
@@ -13,7 +14,9 @@ console.log(store.getState()); // 스토어의 상태를 확인해봅시다.
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}> 
+      <App />
+    </Provider>,
   </React.StrictMode>
 );
 
