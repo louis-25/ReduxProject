@@ -5,7 +5,7 @@ import { increaseAsync, decreaseAsync } from '../modules/counter';
 
 function CounterContainer() {
   const number = useSelector(state => state.counter);
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // store상태 변경해주는 함수
 
   const onIncrease = () => {
     dispatch(increaseAsync());
