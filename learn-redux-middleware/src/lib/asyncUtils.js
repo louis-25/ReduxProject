@@ -18,7 +18,6 @@ export const createPromiseThunk = (type, promiseCreator) => {
   };
 };
 
-
 // 리듀서에서 사용 할 수 있는 여러 유틸 함수들입니다.
 export const reducerUtils = {
   // 초기 상태. 초기 data 값은 기본적으로 null 이지만
